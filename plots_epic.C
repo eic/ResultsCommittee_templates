@@ -57,10 +57,10 @@ void plots_epic()
    Text_ePIC.SetTextSize(0.05);
    Text_ePIC.SetTextFont(62);
    Text_ePIC.DrawLatexNDC(.15,.88,"ePIC Performnace");  // performance plot
-   //Text_ePIC.DrawLatexNDC(.15,.9,"ePIC Internal");  // for internal use only
-   //Text_ePIC.DrawLatexNDC(.15,.9,"ePIC Preliminary"); // preliminary released version 
-   //Text_ePIC.DrawLatexNDC(.15,.9,"ePIC Work in Progress"); // work in progress to be shown outside
-   //Text_ePIC.DrawLatexNDC(.15,.9,"ePIC"); // final published version
+   //Text_ePIC.DrawLatexNDC(.15,.88,"ePIC Internal");  // for internal use only
+   //Text_ePIC.DrawLatexNDC(.15,.88,"ePIC Preliminary"); // preliminary released version 
+   //Text_ePIC.DrawLatexNDC(.15,.88,"ePIC Work in Progress"); // work in progress to be shown outside
+   //Text_ePIC.DrawLatexNDC(.15,.88,"ePIC"); // final published version
 
    // ===== Add ePIC logo to the figure if desired ======
    /*
