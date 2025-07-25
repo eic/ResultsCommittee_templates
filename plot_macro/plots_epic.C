@@ -2,7 +2,8 @@
 
 
 //=====================
-void plots_epic()
+void plots_epic(bool save_plot = true,
+		bool add_epic_logo = true)
 {
   // ===== Set the style =====
   gROOT->ProcessLine("set_ePIC_style()");
@@ -52,7 +53,8 @@ void plots_epic()
    Text_com.SetTextAlign(13);  //align at top
    Text_com.DrawLatexNDC(.15,.85,"e+p, #sqrt{s} = 140 GeV");
    Text_com.DrawLatexNDC(.15,.8,"L_{proj} = 10 fb^{-1}");
-   
+
+
    TLatex Text_ePIC;
    Text_ePIC.SetTextSize(0.05);
    Text_ePIC.SetTextFont(62);
@@ -62,14 +64,18 @@ void plots_epic()
    //Text_ePIC.DrawLatexNDC(.15,.88,"ePIC Work in Progress"); // work in progress to be shown outside
    //Text_ePIC.DrawLatexNDC(.15,.88,"ePIC"); // final published version
 
-   // ===== Add ePIC logo to the figure if desired ======
-   /*
-     TImage *logo = TImage::Open("EPIC-logo_black_small.png");
-     TPad *pad2 = new TPad("pad2", "Pad 2", 0.8, 0.8, 0.93, 0.93); // Create a new pad and then draw the image in it
-     pad2->Draw();
-     pad2->cd(); // Enter the new pad
-     logo->Draw();
-   */
+   if(add_epic_logo)
+     {
+       // ===== Add ePIC logo to the figure if desired ======
+       TImage *logo = TImage::Open("EPIC-logo_black_small.png");
+       TPad *pad2 = new TPad("pad2", "Pad 2", 0.8, 0.8, 0.93, 0.93); // Create a new pad and then draw the image in it
+       pad2->Draw();
+       pad2->cd(); // Enter the new pad
+       logo->Draw();
+     }
 
-   canvas -> SaveAs("example_plot.pdf");
+   if(save_plot)
+     {
+       canvas -> SaveAs("example_plot.pdf");
+     }
 }
