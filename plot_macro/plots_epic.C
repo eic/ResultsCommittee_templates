@@ -3,7 +3,7 @@
 
 //=====================
 void plots_epic(bool save_plot = true,
-		bool add_epic_logo = true)
+		bool add_epic_logo = false)
 {
   // ===== Set the style =====
   gROOT->ProcessLine("set_ePIC_style()");
@@ -35,7 +35,7 @@ void plots_epic(bool save_plot = true,
    canvas -> SetLogy();
 
    hist_data -> Sumw2();
-   hist_data -> SetTitle(";p_{T} [GeV/c];N_{evts}");
+   hist_data -> SetTitle(";p_{T} (GeV/c);N_{evts}");
    hist_data -> SetLineColor(kBlack);
    hist_data -> SetMaximum(1.e5);
    hist_data -> SetMinimum(1.e2);
