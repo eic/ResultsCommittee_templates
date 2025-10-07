@@ -64,6 +64,12 @@ void plots_epic(bool save_plot = true,
    //Text_ePIC.DrawLatexNDC(.15,.88,"ePIC Work in Progress"); // work in progress to be shown outside
    //Text_ePIC.DrawLatexNDC(.15,.88,"ePIC"); // final published version
 
+   // Add dates: needed for performance plots
+   TLatex Text_date;
+   Text_date.SetTextSize(0.035);
+   Text_date.SetTextFont(52);
+   Text_date.DrawLatexNDC(.72,.96,"Released: MM/YYYY");  // performance plot
+
    if(add_epic_logo)
      {
        // ===== Add ePIC logo to the figure if desired ======
