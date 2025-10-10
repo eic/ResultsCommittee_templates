@@ -68,7 +68,7 @@ void plots_epic(bool save_plot = true,
    TLatex Text_date;
    Text_date.SetTextSize(0.035);
    Text_date.SetTextFont(52);
-   Text_date.DrawLatexNDC(.72,.96,"Released: MM/YYYY");  // performance plot
+   Text_date.DrawLatexNDC(.65,.96,"Simu campaign: MM/YYYY");  // performance plot
 
    if(add_epic_logo)
      {
